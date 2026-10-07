@@ -57,7 +57,7 @@
 | R9 | Single VPS = SPOF | Med | Med | Nightly `pg_dump` off-box, restore drill, uptime monitor |
 | R10 | iOS review rejection | Med | Med | Guideline 5.1.1 privacy labels, 4.2 minimum functionality, demo account in review notes |
 
-## 5. Open decisions (need owner input; defaults in bold applied until answered)
+## 5. Decisions (recorded as ADRs in [`adr/`](adr/README.md); bold = default applied)
 
 1. Block Grabber distribution: **sideload-only flavor** vs. drop the feature.
 2. Solver: **VROOM** vs jsprit wrapper vs GH commercial.

@@ -1,2 +1,36 @@
-*/__pycache__/*
-env/*
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p8
+*.p12
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+credentials.json
+
+# node / expo
+node_modules/
+.expo/
+dist/
+web-build/
+npm-debug.*
+# CNG: generated native projects
+mobile/android/
+mobile/ios/
+
+# python
+__pycache__/
+*.pyc
+env/
+.venv/
+
+# misc
+.DS_Store
+*.log
+coverage/
+.idea/
+.vscode/
