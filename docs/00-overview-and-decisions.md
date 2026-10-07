@@ -63,8 +63,9 @@
 2. Solver: **VROOM** vs jsprit wrapper vs GH commercial.
 3. OCR: **Gemini Vision w/ ML Kit fallback** vs Tesseract only.
 4. Monetization: **free beta → freemium** (undecided; affects Reddit copy).
-5. Reddit account: **dedicated, disclosed brand account** vs personal.
-6. Domain / app name / bundle IDs: **`com.flexcompanion.app`** placeholder.
+5. ~~Reddit account~~ — **DECIDED: owner's personal account** (disclosure rules in [06](06-reddit-workflow.md) apply with extra care).
+6. Domain: **DECIDED `flexcop.ackgent.com`** (landing/sideload page; API at `api.flexcop.ackgent.com`, staging `staging-api.flexcop.ackgent.com`). Bundle ID still placeholder **`com.flexcompanion.app`**.
+7. ~~Framework~~ — **DECIDED: React Native (Expo, CNG)** as already planned.
 
 ## 6. Out of scope (v1)
 

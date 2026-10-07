@@ -47,7 +47,7 @@ CNG rule: `android/` and `ios/` are **generated** — never hand-edit; use confi
 | Google AI Studio | Gemini Vision | `GEMINI_API_KEY` (API server proxy — **not** shipped in app) |
 | Sentry | crash/errors | `SENTRY_DSN`, `SENTRY_AUTH_TOKEN` |
 | Reddit | community | OAuth app creds (read-only) → local `.env` |
-| Domain/DNS | API, landing page | registrar |
+| Domain/DNS `flexcop.ackgent.com` | landing page (root), `api.` and `staging-api.` A records → VPS | registrar/DNS host |
 
 Gemini key must live on the API server; the app calls `POST /v1/ocr` (or uses on-device OCR). Never embed in the bundle.
 
@@ -75,4 +75,4 @@ Example `.env.example` keys (values never committed):
 
 ## 7. Environment verification script (T-100..T-107 exit)
 
-Checklist (run as a single `scripts/doctor.sh` — a task for DevOps): node/npm versions, `eas whoami`, `adb devices`, `java -version`, docker reachable on VPS, `curl https://api.<domain>/healthz`. Exit non-zero on any failure.
+Checklist (run as a single `scripts/doctor.sh` — a task for DevOps): node/npm versions, `eas whoami`, `adb devices`, `java -version`, docker reachable on VPS, `curl https://api.flexcop.ackgent.com/healthz`. Exit non-zero on any failure.

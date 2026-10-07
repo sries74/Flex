@@ -1,6 +1,6 @@
 # 06 — Reddit Workflow
 
-The source spec has no Reddit section; this is a proposed workflow (assumption A1: Reddit is used for **market research, beta recruitment, feedback intake and launch**). Confirm in decision D5.
+The source spec has no Reddit section; this is a proposed workflow (assumption A1: Reddit is used for **market research, beta recruitment, feedback intake and launch**). Decision D5: **owner's personal Reddit account** (no brand/alt accounts).
 
 ## 1. Principles
 
@@ -34,7 +34,7 @@ The source spec has no Reddit section; this is a proposed workflow (assumption A
 ## 4. Stages
 
 ### Stage R0 — Setup (T-950)
-1. Create/confirm Reddit account (age, karma, history). Start participating normally ≥ 2–4 weeks before any promo.
+1. Use the owner's **personal account** (the only account — no alts). Check its age/karma/history against each sub's minimums. Because it's personal: always disclose "I'm the developer" on promo posts, keep promo posts a small share of activity, keep personal/unrelated content out of the project's story, and review post history for anything you wouldn't want tied to the app. Start participating normally ≥ 2–4 weeks before any promo.
 2. Register a **read-only** OAuth script app (local `.env`); build `community/tools/` fetch scripts (rate-limited, no PII persisted).
 3. Fill rules matrix; flag subs requiring mod pre-approval; draft mod-permission messages (owner sends).
 4. Define tone guide + "do not say" list: no earnings claims, no "guaranteed blocks", no implication of Amazon endorsement, no promise of ToS-safe automation.

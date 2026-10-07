@@ -11,6 +11,9 @@ Expo (CNG, TypeScript strict) · Expo Router · NativeWind · Firebase Auth · F
 ## Repo map
 `mobile/` app · `mobile/modules/block-grabber/` Kotlin · `api/` · `infra/` · `e2e/` · `community/` · `docs/` · `legacy/` (old Python bot, reference only; currently still at repo root until T-002).
 
+## Decisions
+React Native (Expo) · Reddit via owner's personal account (human posts, disclosed) · domain `flexcop.ackgent.com` (api. / staging-api. subdomains).
+
 ## Branches
 `main` protected/trunk · `master` legacy · work on `feat|fix|chore|docs/T-xxx-slug` or `claude/*`, PR into `main`.
 
