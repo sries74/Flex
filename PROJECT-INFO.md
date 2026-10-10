@@ -9,7 +9,7 @@ Mobile companion for gig delivery drivers: itinerary OCR import, live camera pac
 Expo (CNG, TypeScript strict) · Expo Router · NativeWind · Firebase Auth · Fastify API · PostgreSQL + pgvector · VRPTW solver + road engine (ADR T-530) · Gemini Vision + on-device OCR · Kotlin Expo module · EAS Build/Submit · Fastlane (metadata) · GitHub Actions · Debian 13 VPS (Docker + Caddy).
 
 ## Repo map
-`mobile/` app · `mobile/modules/block-grabber/` Kotlin · `api/` · `infra/` · `e2e/` · `community/` · `docs/` · `legacy/` (old Python bot, reference only; currently still at repo root until T-002).
+`mobile/` app · `mobile/modules/block-grabber/` Kotlin · `api/` · `infra/` · `e2e/` · `community/` · `docs/` · `legacy/` (old Python bot, reference only).
 
 ## Decisions
 React Native (Expo) · Reddit via owner's personal account (human posts, disclosed) · domain `flexcop.ackgent.com` (api. / staging-api. subdomains).
