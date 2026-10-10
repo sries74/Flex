@@ -17,11 +17,11 @@ React Native (Expo) · Reddit via owner's personal account (human posts, disclos
 ## Branches
 `main` protected/trunk · `master` legacy · work on `feat|fix|chore|docs/T-xxx-slug` or `claude/*`, PR into `main`.
 
-## Commands (once `mobile/` exists)
+## Commands (run in `mobile/`)
 ```text
 npm run lint && npm run typecheck && npm test     # must pass before PR
 npx vitest run | npx jest                          # unit | component
-npm run eval:ocr                                   # OCR accuracy gate
+npm run eval:ocr                                   # OCR accuracy gate (added in T-425)
 npx expo run:android                               # dev client
 ```
 

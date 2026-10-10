@@ -19,7 +19,7 @@ Pyramid target: ~70% unit/contract, ~25% component/integration, ~5% E2E.
 
 ## 2. Spec deviation (C4)
 
-Spec §4.1 installs Vitest + RNTL. RN transforms are unreliable under Vitest, so: **jest-expo** for anything importing `react-native`; **Vitest** for pure TypeScript. One `npm test` runs both (`"test": "npm-run-all test:unit test:rn"`).
+Spec §4.1 installs Vitest + RNTL. RN transforms are unreliable under Vitest, so: **jest-expo** for anything importing `react-native`; **Vitest** for pure TypeScript. One `npm test` runs both (`"test": "npm run test:unit && npm run test:rn"`). Implemented in T-160: Vitest covers `lib/**/*.test.ts`; jest-expo covers `{app,components}/**/*.test.{ts,tsx}`. Note: `@testing-library/react-native` v14 `render` is **async** (`await render(...)`), and TypeScript 6 no longer auto-loads `@types/*`, so `tsconfig.json` sets `"types": ["jest"]`.
 
 ## 3. TDD loop (every task)
 

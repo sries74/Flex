@@ -41,7 +41,8 @@ Flex/
 - Feature flags via `app.config.ts` `extra.variant` (`store` | `sideload`) and remote config.
 - Errors: typed `Result` for expected failures; Sentry for unexpected.
 - Logging: no PII (addresses, names) in logs/Sentry — scrub in `beforeSend`.
-- Style: Prettier + ESLint (expo preset) ; Kotlin: ktlint.
+- Style: Prettier (+ tailwind plugin) + ESLint (`eslint-config-expo` flat config); Kotlin: ktlint. Pre-commit uses the `pre-commit` framework (gitleaks + `lint-staged` for `mobile/`) — **not Husky**, because both manage `core.hooksPath` and conflict.
+- Config: `mobile/app.config.ts` (dynamic; `extra.variant` from `FLEX_VARIANT`), not `app.json`.
 
 ## 4. Build order (dependency-driven)
 

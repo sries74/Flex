@@ -10,3 +10,11 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: mobile-lint-staged
+        name: mobile lint-staged (eslint + prettier)
+        entry: bash -c 'cd mobile && [ -d node_modules ] && npm run -s precommit || echo "skip: run npm ci in mobile/"'
+        language: system
+        files: ^mobile/
+        pass_filenames: false
