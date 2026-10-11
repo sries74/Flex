@@ -2,16 +2,17 @@ import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import type { Db } from '../src/db.js';
 import { loadMigrations, migrateDown, migrateUp } from '../src/migrate.js';
-import { createTestDb } from './pgliteDb.js';
+import { createDb } from './dbFactory.js';
 
 const migrations = loadMigrations(join(import.meta.dirname, '../migrations'));
 let db: Db;
+let cleanup: () => Promise<void>;
 
 beforeEach(async () => {
-  db = await createTestDb();
+  ({ db, cleanup } = await createDb());
 });
 afterEach(async () => {
-  await db.close();
+  await cleanup();
 });
 
 const tables = async () =>

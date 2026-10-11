@@ -28,8 +28,16 @@ function queries(q: Queryable): Pick<Db, 'query' | 'exec'> {
   };
 }
 
-export function createPgDb(connectionString: string): Db {
+export function createPgDb(
+  connectionString: string,
+  onPoolError: (code: string | undefined) => void = (code) =>
+    console.error(`database pool error (idle connection dropped): ${code ?? 'unknown'}`),
+): Db {
   const pool = new pg.Pool({ connectionString, max: 10, idleTimeoutMillis: 30_000 });
+  // Without a listener, an idle client dropped by the server (restart, failover, admin kill)
+  // emits an unhandled 'error' and crashes the whole process. The pool discards the dead client
+  // and opens a new one on the next query.
+  pool.on('error', (err) => onPoolError((err as { code?: string }).code));
 
   return {
     ...queries(pool),
