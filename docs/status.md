@@ -4,7 +4,7 @@ Updated each time a phase PR merges. Task IDs refer to [01-master-task-list.md](
 
 | Phase | State | Notes |
 |---|---|---|
-| P0 Repo & governance | Done except T-001 settings, T-005 | Default branch + branch protection need GitHub settings; labels/issues not created |
+| P0 Repo & governance | Done except T-005 (labels/issues) | `main` is default and protected (confirmed by owner) |
 | P1 Environment | Tooling done; **owner steps pending** | WSL/VPS/accounts — [runbook](runbooks/phase1-environment.md) |
 | P2 Project init | Done | [runbook](runbooks/phase2-mobile-setup.md) |
 | P3 UI shell & auth | Done except Google sign-in (T-230b), icons | Needs Firebase project — [runbook](runbooks/phase3-ui-auth.md) |
