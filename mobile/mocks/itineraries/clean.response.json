@@ -1,0 +1,25 @@
+{
+  "stops": [
+    {
+      "stop_number": 2,
+      "address": "  742 Evergreen Terrace,  Springfield  ",
+      "delivery_window_end": "6:30 PM",
+      "package_count": 2,
+      "confidence": 0.96
+    },
+    {
+      "stop_number": 1,
+      "address": "12 Example Street Apt 4B",
+      "delivery_window_end": "17:45",
+      "delivery_window_start": "3:00 PM",
+      "package_count": 1,
+      "confidence": 0.99
+    },
+    {
+      "stop_number": 3,
+      "address": "9 Sample Road",
+      "delivery_window_end": "12:00 AM",
+      "confidence": 0.91
+    }
+  ]
+}

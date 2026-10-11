@@ -1,0 +1,42 @@
+{
+  "code": 0,
+  "summary": { "cost": 600, "unassigned": 1, "service": 300, "duration": 300, "waiting_time": 0 },
+  "unassigned": [{ "id": 2, "location": [-122.43, 37.81], "type": "job" }],
+  "routes": [
+    {
+      "vehicle": 1,
+      "cost": 600,
+      "service": 300,
+      "duration": 300,
+      "waiting_time": 0,
+      "steps": [
+        {
+          "type": "start",
+          "location": [-122.4, 37.78],
+          "arrival": 32400,
+          "duration": 0,
+          "service": 0,
+          "waiting_time": 0
+        },
+        {
+          "type": "job",
+          "id": 1,
+          "job": 1,
+          "location": [-122.42, 37.8],
+          "arrival": 32700,
+          "duration": 300,
+          "service": 300,
+          "waiting_time": 0
+        },
+        {
+          "type": "end",
+          "location": [-122.4, 37.78],
+          "arrival": 33000,
+          "duration": 600,
+          "service": 0,
+          "waiting_time": 0
+        }
+      ]
+    }
+  ]
+}

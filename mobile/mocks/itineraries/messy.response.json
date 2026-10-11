@@ -1,0 +1,25 @@
+{
+  "stops": [
+    {
+      "stop_number": 1,
+      "address": "100 Test Lane",
+      "delivery_window_end": "soon",
+      "confidence": 0.95
+    },
+    { "stop_number": 1, "address": "101 Duplicate Lane", "delivery_window_end": "5:00 PM" },
+    { "stop_number": 2, "address": "   ", "delivery_window_end": "5:00 PM" },
+    {
+      "stop_number": 3,
+      "address": "300 Fuzzy Way",
+      "delivery_window_end": "4:00 PM",
+      "delivery_window_start": "6:00 PM"
+    },
+    {
+      "stop_number": 4,
+      "address": "400 Low Confidence Blvd",
+      "delivery_window_end": "7:15 PM",
+      "confidence": 0.4,
+      "unexpected_field": "ignored"
+    }
+  ]
+}
