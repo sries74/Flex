@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Modal, Pressable, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 import { Button } from './Button';
 
 export interface SheetProps {
@@ -23,7 +23,13 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
           <View accessibilityRole="header">
             <Text className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</Text>
           </View>
-          {children}
+          <ScrollView
+            keyboardShouldPersistTaps="handled"
+            className="max-h-96"
+            contentContainerClassName="gap-3"
+          >
+            {children}
+          </ScrollView>
           <Button title="Close" variant="secondary" onPress={onClose} />
         </Pressable>
       </Pressable>

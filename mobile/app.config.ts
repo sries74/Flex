@@ -26,7 +26,14 @@ const config: ExpoConfig = {
     },
     predictiveBackGestureEnabled: false,
   },
-  plugins: ['expo-router', 'expo-status-bar'],
+  plugins: [
+    'expo-router',
+    'expo-status-bar',
+    [
+      'expo-image-picker',
+      { photosPermission: 'FlexCompanion reads the itinerary screenshot you choose.' },
+    ],
+  ],
   experiments: { typedRoutes: true },
   extra: { variant },
 };
