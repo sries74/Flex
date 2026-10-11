@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useMemo } from 'react';
 import { AuthProvider, useAuth } from '@/components/auth/AuthProvider';
+import { ItineraryProvider } from '@/components/itinerary/ItineraryProvider';
 import { LoadingState } from '@/components/ui/ScreenState';
 import { getAuthService, type AuthService } from '@/lib/auth';
 
@@ -28,7 +29,9 @@ export default function RootLayout({ service }: { service?: AuthService }) {
   return (
     <AuthProvider service={authService}>
       <StatusBar style="auto" />
-      <RootNavigator />
+      <ItineraryProvider>
+        <RootNavigator />
+      </ItineraryProvider>
     </AuthProvider>
   );
 }
