@@ -1,9 +1,8 @@
-import { Text, View } from 'react-native';
+import { Redirect } from 'expo-router';
+import { useAuth } from '@/components/auth/AuthProvider';
 
+/** '/' has no screen of its own: send people to wherever their auth state says they belong. */
 export default function Index() {
-  return (
-    <View className="flex-1 items-center justify-center bg-white dark:bg-black">
-      <Text className="text-xl font-bold text-blue-600">FlexCompanion</Text>
-    </View>
-  );
+  const { status } = useAuth();
+  return <Redirect href={status === 'signedIn' ? '/itinerary' : '/login'} />;
 }

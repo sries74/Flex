@@ -8,5 +8,6 @@
 | [0004](0004-ocr-strategy.md) | OCR: Gemini Vision + on-device fallback | Accepted (default) |
 | [0005](0005-reddit-account-and-domain.md) | Reddit account and domain | Accepted |
 | [0006](0006-monorepo-and-branching.md) | Monorepo layout and trunk-based branching | Accepted |
+| [0007](0007-firebase-js-sdk-with-secure-store.md) | Firebase JS SDK with SecureStore persistence | Accepted |
 
 Format: Context · Decision · Consequences. New ADR = next number, PR into `main`.
