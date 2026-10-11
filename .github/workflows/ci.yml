@@ -1,10 +1,10 @@
 name: ci
 on:
   pull_request:
-    paths: ['mobile/**', '.github/workflows/ci.yml']
+    paths: ['mobile/**', 'api/**', '.github/workflows/ci.yml']
   push:
     branches: [main]
-    paths: ['mobile/**', '.github/workflows/ci.yml']
+    paths: ['mobile/**', 'api/**', '.github/workflows/ci.yml']
 permissions:
   contents: read
 concurrency:
@@ -33,3 +33,35 @@ jobs:
         run: npx --yes expo-doctor
       - name: Android bundle smoke test
         run: npx expo export --platform android --output-dir "$RUNNER_TEMP/export"
+  api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      # The suite then runs against this real server instead of the in-process PGlite.
+      TEST_DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
