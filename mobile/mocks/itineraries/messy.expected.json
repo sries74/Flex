@@ -1,0 +1,35 @@
+{
+  "stops": [
+    {
+      "stopNumber": 1,
+      "address": "100 Test Lane",
+      "windowStartMin": null,
+      "windowEndMin": null,
+      "packageCount": null,
+      "needsReview": true
+    },
+    {
+      "stopNumber": 3,
+      "address": "300 Fuzzy Way",
+      "windowStartMin": 1080,
+      "windowEndMin": 960,
+      "packageCount": null,
+      "needsReview": true
+    },
+    {
+      "stopNumber": 4,
+      "address": "400 Low Confidence Blvd",
+      "windowStartMin": null,
+      "windowEndMin": 1155,
+      "packageCount": null,
+      "needsReview": true
+    }
+  ],
+  "issues": [
+    { "stopNumber": 1, "code": "unparseable_time" },
+    { "stopNumber": 1, "code": "duplicate_stop_number" },
+    { "stopNumber": 2, "code": "missing_address" },
+    { "stopNumber": 3, "code": "window_inverted" },
+    { "stopNumber": 4, "code": "low_confidence" }
+  ]
+}

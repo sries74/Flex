@@ -1,0 +1,29 @@
+{
+  "stops": [
+    {
+      "stopNumber": 1,
+      "address": "12 Example Street Apt 4B",
+      "windowStartMin": 900,
+      "windowEndMin": 1065,
+      "packageCount": 1,
+      "needsReview": false
+    },
+    {
+      "stopNumber": 2,
+      "address": "742 Evergreen Terrace, Springfield",
+      "windowStartMin": null,
+      "windowEndMin": 1110,
+      "packageCount": 2,
+      "needsReview": false
+    },
+    {
+      "stopNumber": 3,
+      "address": "9 Sample Road",
+      "windowStartMin": null,
+      "windowEndMin": 0,
+      "packageCount": null,
+      "needsReview": false
+    }
+  ],
+  "issues": []
+}

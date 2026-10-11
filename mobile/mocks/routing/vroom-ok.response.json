@@ -1,0 +1,71 @@
+{
+  "code": 0,
+  "summary": {
+    "cost": 3300,
+    "unassigned": 0,
+    "service": 900,
+    "duration": 2400,
+    "waiting_time": 600,
+    "distance": 18250
+  },
+  "unassigned": [],
+  "routes": [
+    {
+      "vehicle": 1,
+      "cost": 3300,
+      "service": 900,
+      "duration": 2400,
+      "waiting_time": 600,
+      "distance": 18250,
+      "geometry": "_p~iF~ps|U_ulLnnqC",
+      "steps": [
+        {
+          "type": "start",
+          "location": [-122.4, 37.78],
+          "arrival": 32400,
+          "duration": 0,
+          "service": 0,
+          "waiting_time": 0
+        },
+        {
+          "type": "job",
+          "id": 3,
+          "job": 3,
+          "location": [-122.41, 37.79],
+          "arrival": 32700,
+          "duration": 300,
+          "service": 300,
+          "waiting_time": 0
+        },
+        {
+          "type": "job",
+          "id": 1,
+          "job": 1,
+          "location": [-122.42, 37.8],
+          "arrival": 33600,
+          "duration": 900,
+          "service": 300,
+          "waiting_time": 600
+        },
+        {
+          "type": "job",
+          "id": 2,
+          "job": 2,
+          "location": [-122.43, 37.81],
+          "arrival": 34500,
+          "duration": 1200,
+          "service": 300,
+          "waiting_time": 0
+        },
+        {
+          "type": "end",
+          "location": [-122.4, 37.78],
+          "arrival": 35100,
+          "duration": 2400,
+          "service": 0,
+          "waiting_time": 0
+        }
+      ]
+    }
+  ]
+}
